@@ -3308,7 +3308,7 @@ end)
 HomeTab.newButton("Reset Character (Gets rid of Combat Mark)","",function()
     task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("GojoDialogue"):FireServer(unpack(args));
+    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("AtomicFX"):FireServer(unpack(args));
 end)
 
 HomeTab.newButton("Insta Respawn Character (Gets rid of Combat Mark)","",function()
