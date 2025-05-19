@@ -3952,11 +3952,11 @@ FarmingTab.newButton("Read This (Very Important)","",function()
 end)
 
 FarmingTab.newLabel("Equip Best Farming Spec   📌");
-FarmingTab.newButton("Equip Shinra Kusakabe (Best for Private Server Autofarm)","",function()
+FarmingTab.newButton("Equip Hie Hie no mi (Best for Private Server Autofarm)","",function()
     pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Padoru" then
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Hie Hie no mi" then
             for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Padoru" then
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Hie Hie no mi" then
                     local args = {"Slot"..i};
                     if i <= 6 then
                         game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
