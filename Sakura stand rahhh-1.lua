@@ -3257,7 +3257,7 @@ local MainWindow = DrRayLibrary:Load("Sakura Hub   🌸","Default");
 local HomeTab = DrRayLibrary.newTab("Home","http://www.roblox.com/asset/?id=9405923687");
 
 -- // Apply Custom UI Color \\ --
-game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(0,0,0);
+game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(128,0,128);
 game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(0,0,0);
 game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(0,0,0);
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.Clock.BackgroundTransparency = 0.75;
@@ -3270,7 +3270,7 @@ game:GetService("CoreGui").DrRay.TopBar.TopBarClose.idk.Visible = false;
 BoredLibrary.prompt("Sakura Hub 🌸","Current Version: "..getgenv().CurrentVersion,1.5);
 ---------------------------------[[ Main Source Code 💞 ]]------------------------------------------------------------
 HomeTab.newLabel("Script Hub Credits   ✨");
-HomeTab.newButton("Script Made by Flames","",function()
+HomeTab.newButton("Script Made by Flames )Continue By B&M)","",function()
     local Cheers = "http://www.roblox.com/asset/?id=1617624223"
     local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Cheers
     Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
@@ -3531,7 +3531,7 @@ end)
 
 HomeTab.newLabel("Quick Scripts   🚀");
 HomeTab.newButton("Animation Grabber","",function()
-    loadstring(game:HttpGet("https://github.com/Kaa4801/SakuraStand/blob/main/Grabber"))();
+    loadstring(game:HttpGet("https://github.com/Not Have Yet/SakuraStand/blob/main/Grabber"))();
 end)
 
 HomeTab.newButton("Infinite Yield","",function()
@@ -3550,8 +3550,12 @@ HomeTab.newButton("Teleport Maker","",function()
     loadstring(game:HttpGet("https://pastebin.com/raw/GSgUCJmq"))();
 end)
 
+HomeTab.newButton("Good Universal","",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MSTTOPPER/Scripts/refs/heads/main/CapyHub"))();
+end)
+
 HomeTab.newLabel("Sakura Hub Stuff  🌸");
-HomeTab.newButton("Official Discord Server (Copied to Clipboard)","",function()
+HomeTab.newButton("Official Discord Server (Got Deleted)","",function()
     setclipboard("https://discord.gg/XcUFRW4DWH");
     BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
 end)
@@ -3650,7 +3654,7 @@ end)
 
 HomeTab.newButton("Reload Sakura Hub","",function()
     task.spawn(function()BoredLibrary.prompt("Sakura Hub  🌸","Reloading Hub...",0.75);end)
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakura%20stand%20rahhh-1.lua";
 
     pcall(function()
         getgenv().Configurations();loadstring(game:HttpGet(getgenv().SakuraHub))();
@@ -3669,7 +3673,7 @@ end)
 
 HomeTab.newButton("Reset Sakura Hub Config","",function()
     task.spawn(function()getgenv().Configurations();getgenv().ResetConfigurations();end)
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakura%20stand%20rahhh-1.lua";
 
     pcall(function()
         getgenv().Configurations();loadstring(game:HttpGet(getgenv().SakuraHub))();
