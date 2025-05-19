@@ -4524,6 +4524,56 @@ task.spawn(function()
     end
 end) task.spawn(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/StatisticsGUI"))();end)
 
+-- Track the current rainbow thread so we don't duplicate it
+if getgenv().RainbowThread and coroutine.status(getgenv().RainbowThread) ~= "dead" then
+    coroutine.close(getgenv().RainbowThread)
+end
+
+getgenv().UsingRainbowUI = function()
+    local gui = game:GetService("CoreGui")
+    local topBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("TopBar")
+    local mainBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("MainBar")
+    local statsFrame = gui:FindFirstChild("StatisticsGUI") and gui.StatisticsGUI:FindFirstChild("Frame")
+
+    local function setColor(color)
+        if topBar then
+            topBar.BackgroundColor3 = color
+            if topBar:FindFirstChild("TopBar") then
+                topBar.TopBar.BackgroundColor3 = color
+            end
+        end
+        if mainBar then
+            mainBar.BackgroundColor3 = color
+        end
+        if statsFrame then
+            statsFrame.BackgroundColor3 = color
+        end
+    end
+
+    -- If disabled, reset to black and exit
+    if not getgenv().AutoGoingRainbow then
+        setColor(Color3.new(0, 0, 0))
+        return
+    end
+
+    -- Start the rainbow loop
+    getgenv().RainbowThread = coroutine.create(function()
+        while getgenv().AutoGoingRainbow do
+            pcall(function()
+                local t = tick() % 1
+                local r = math.sin(t * 2 * math.pi) * 0.5 + 0.5
+                local g = math.sin(t * 2 * math.pi + 2 * math.pi / 3) * 0.5 + 0.5
+                local b = math.sin(t * 2 * math.pi + 4 * math.pi / 3) * 0.5 + 0.5
+
+                setColor(Color3.new(r, g, b))
+            end)
+            task.wait(0.35)
+        end
+        setColor(Color3.new(0, 0, 0)) -- reset when loop ends
+    end)
+
+    coroutine.resume(getgenv().RainbowThread)
+end
 
 
 
