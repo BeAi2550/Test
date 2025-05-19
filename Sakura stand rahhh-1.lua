@@ -3257,9 +3257,9 @@ local MainWindow = DrRayLibrary:Load("Sakura Hub   🌸","Default");
 local HomeTab = DrRayLibrary.newTab("Home","http://www.roblox.com/asset/?id=9405923687");
 
 -- // Apply Custom UI Color \\ --
-game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(128,0,128);
-game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(0,0,0);
-game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(0,0,0);
+game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(25,5,35);
+game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(180,130,255);
+game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(150,80,200);
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.Clock.BackgroundTransparency = 0.75;
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.PlayerProfile.BackgroundTransparency = 0.75;
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.Title.BackgroundTransparency = 0.75;
