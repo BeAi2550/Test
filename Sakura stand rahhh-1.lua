@@ -1,4 +1,4 @@
--- // Sakura Hub 🌸 \\ -- | (Version 1.9) [ Continue by B&M :3 ]
+-- // Sakura Hub 🌸 \\ -- | (Version 1.9)  Continue by B&M :3 
 
 --[[---------------------------------------------------------------------------------------------------
     This script not updates a lot, don't Use this loadstring to be in the latest version:
@@ -3954,9 +3954,9 @@ end)
 FarmingTab.newLabel("Equip Best Farming Spec   📌");
 FarmingTab.newButton("Equip Shinra Kusakabe (Best for Private Server Autofarm)","",function()
     pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Shinra Kusakabe" then
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Padoru" then
             for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Padoru" then
                     local args = {"Slot"..i};
                     if i <= 6 then
                         game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
