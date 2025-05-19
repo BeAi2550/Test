@@ -4525,7 +4525,7 @@ task.spawn(function()
     end
 end) task.spawn(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/StatisticsGUI"))();end)
 
--- Track the current purple thread so we don't duplicate it
+-- Kill previous thread if still active
 if getgenv().RainbowThread and coroutine.status(getgenv().RainbowThread) ~= "dead" then
     coroutine.close(getgenv().RainbowThread)
 end
@@ -4551,77 +4551,66 @@ getgenv().UsingRainbowUI = function()
         end
     end
 
-    -- If disabled, reset to black and exit
+    local function attachParticlesTo(frame)
+        if not frame or frame:FindFirstChild("UIGlow") then return end
+
+        local emitter = Instance.new("ParticleEmitter")
+        emitter.Name = "UIGlow"
+        emitter.Rate = 3
+        emitter.Lifetime = NumberRange.new(1.2)
+        emitter.LightInfluence = 1
+        emitter.LightEmission = 0.9
+        emitter.Size = NumberSequence.new(0.3)
+        emitter.Speed = NumberRange.new(0.2)
+        emitter.Rotation = NumberRange.new(0, 360)
+        emitter.RotSpeed = NumberRange.new(20)
+        emitter.Texture = "rbxassetid://296874871" -- Sparkle/star texture
+        emitter.Transparency = NumberSequence.new({
+            NumberSequenceKeypoint.new(0, 1),
+            NumberSequenceKeypoint.new(0.25, 0.4),
+            NumberSequenceKeypoint.new(0.75, 0.4),
+            NumberSequenceKeypoint.new(1, 1)
+        })
+        emitter.Color = ColorSequence.new{
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(200, 100, 255)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(150, 50, 255))
+        }
+
+        emitter.Parent = frame
+    end
+
     if not getgenv().AutoGoingRainbow then
         setColor(Color3.new(0, 0, 0))
         return
     end
+
+    -- Attach sparkles once
+    attachParticlesTo(topBar)
+    attachParticlesTo(mainBar)
+    attachParticlesTo(statsFrame)
 
     -- Start the purple wave loop
     getgenv().RainbowThread = coroutine.create(function()
         while getgenv().AutoGoingRainbow do
             pcall(function()
                 local t = tick() % 1
-                -- Smooth shifting purples (dominantly blue/red mix)
-                local r = 0.4 + math.sin(t * 2 * math.pi) * 0.2  -- Slight red sway
-                local g = 0.05 + math.sin(t * 2 * math.pi + math.pi / 2) * 0.05 -- subtle green to keep it purple
-                local b = 0.6 + math.sin(t * 2 * math.pi + math.pi) * 0.3  -- stronger blue sway
+                local r = 0.4 + math.sin(t * 2 * math.pi) * 0.3
+                local g = 0.1 + math.sin(t * 2 * math.pi + math.pi / 2) * 0.1
+                local b = 0.5 + math.sin(t * 2 * math.pi + math.pi) * 0.4
 
                 setColor(Color3.new(r, g, b))
             end)
             task.wait(0.35)
         end
-        setColor(Color3.new(0, 0, 0)) -- reset when off
+
+        -- Reset color and remove particles
+        setColor(Color3.new(0, 0, 0))
+        for _, frame in ipairs({topBar, mainBar, statsFrame}) do
+            if frame and frame:FindFirstChild("UIGlow") then
+                frame.UIGlow:Destroy()
+            end
+        end
     end)
 
     coroutine.resume(getgenv().RainbowThread)
-end
-getgenv().UsingRedGlowUI = function()
-    -- Kill previous thread if it exists
-    if getgenv().RedGlowThread and coroutine.status(getgenv().RedGlowThread) ~= "dead" then
-        coroutine.close(getgenv().RedGlowThread)
-    end
-
-    local gui = game:GetService("CoreGui")
-    local topBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("TopBar")
-    local mainBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("MainBar")
-    local statsFrame = gui:FindFirstChild("StatisticsGUI") and gui.StatisticsGUI:FindFirstChild("Frame")
-
-    local function setColor(color)
-        if topBar then
-            topBar.BackgroundColor3 = color
-            if topBar:FindFirstChild("TopBar") then
-                topBar.TopBar.BackgroundColor3 = color
-            end
-        end
-        if mainBar then
-            mainBar.BackgroundColor3 = color
-        end
-        if statsFrame then
-            statsFrame.BackgroundColor3 = color
-        end
-    end
-
-    if not getgenv().AutoRedGlow then
-        setColor(Color3.new(0, 0, 0))
-        return
-    end
-
-    getgenv().RedGlowThread = coroutine.create(function()
-        while getgenv().AutoRedGlow do
-            pcall(function()
-                local t = tick() % 1
-                -- Smooth shifting reds
-                local r = 0.6 + math.sin(t * 2 * math.pi) * 0.4  -- rich red base
-                local g = 0.05 + math.sin(t * 2 * math.pi + math.pi / 3) * 0.05  -- just enough green to keep from going black
-                local b = 0.05 + math.sin(t * 2 * math.pi + 2 * math.pi / 3) * 0.05 -- same for blue
-
-                setColor(Color3.new(r, g, b))
-            end)
-            task.wait(0.35)
-        end
-        setColor(Color3.new(0, 0, 0)) -- Reset when done
-    end)
-
-    coroutine.resume(getgenv().RedGlowThread)
 end
