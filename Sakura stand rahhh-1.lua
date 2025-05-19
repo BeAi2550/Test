@@ -4,7 +4,7 @@
     This script not updates a lot, don't Use this loadstring to be in the latest version:
 
     getgenv().ToggleUI = "J" -- //  Key Toggle "J" set by default however you can change it.
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Kaa4801/SakuraStand/main/Sakura%20stand%20.txt";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakura%20stand%20rahhh-1.lua?token=GHSAT0AAAAAADEEZOC4RY4MYEW3QLWR3TKW2BLJKMA";
 
     pcall(function()
         loadstring(game:HttpGet(getgenv().SakuraHub))();
@@ -185,8 +185,8 @@ for i,v in ipairs(game:GetService("Lighting"):GetChildren()) do
 end
 
 -----------------------------------[[ Main Ui Libs ]]------------------------------------------------------------------
-local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaa4801/SakuraStand/main/DrayUI.txt"))();
-local BoredLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaa4801/SakuraStand/main/BoredUI.txt"))();
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/DrayUI.txt?token=GHSAT0AAAAAADEEZOC5Z7ORH3JUILVGNUXI2BLJL7Q"))();
+local BoredLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/BoredUI.txt?token=GHSAT0AAAAAADEEZOC4E62COIEHC2UTDMK42BLJMTQ"))();
 -----------------------------------[[ Main Ui Libs ]]------------------------------------------------------------------
 
 getgenv().StartLoading = function(z)
