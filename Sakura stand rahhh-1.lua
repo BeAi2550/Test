@@ -3258,7 +3258,7 @@ local MainWindow = DrRayLibrary:Load("Sakura Hub   🌸","Default");
 local HomeTab = DrRayLibrary.newTab("Home","http://www.roblox.com/asset/?id=9405923687");
 
 -- // Apply Custom UI Color \\ --
-game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(128,0,128);
+game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(70,34,108);
 game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(0,0,0);
 game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(0,0,0);
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.Clock.BackgroundTransparency = 0.75;
@@ -3308,7 +3308,7 @@ end)
 HomeTab.newButton("Reset Character (Gets rid of Combat Mark)","",function()
     task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("AtomicFX"):FireServer(unpack(args));
+    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("AFODialogue"):FireServer(unpack(args));
 end)
 
 HomeTab.newButton("Insta Respawn Character (Gets rid of Combat Mark)","",function()
