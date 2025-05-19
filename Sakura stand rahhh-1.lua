@@ -168,6 +168,7 @@ getgenv().Configurations = function()
 
         -- [Sakura Hub UI Scripts]
         getgenv().AutoGoingRainbow = false;
+        getgenv().AutoRedGlow = false
         game:GetService("CoreGui").StatisticsGUI.Enabled = false;
     end)
 end
@@ -4574,4 +4575,53 @@ getgenv().UsingRainbowUI = function()
     end)
 
     coroutine.resume(getgenv().RainbowThread)
+end
+getgenv().UsingRedGlowUI = function()
+    -- Kill previous thread if it exists
+    if getgenv().RedGlowThread and coroutine.status(getgenv().RedGlowThread) ~= "dead" then
+        coroutine.close(getgenv().RedGlowThread)
+    end
+
+    local gui = game:GetService("CoreGui")
+    local topBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("TopBar")
+    local mainBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("MainBar")
+    local statsFrame = gui:FindFirstChild("StatisticsGUI") and gui.StatisticsGUI:FindFirstChild("Frame")
+
+    local function setColor(color)
+        if topBar then
+            topBar.BackgroundColor3 = color
+            if topBar:FindFirstChild("TopBar") then
+                topBar.TopBar.BackgroundColor3 = color
+            end
+        end
+        if mainBar then
+            mainBar.BackgroundColor3 = color
+        end
+        if statsFrame then
+            statsFrame.BackgroundColor3 = color
+        end
+    end
+
+    if not getgenv().AutoRedGlow then
+        setColor(Color3.new(0, 0, 0))
+        return
+    end
+
+    getgenv().RedGlowThread = coroutine.create(function()
+        while getgenv().AutoRedGlow do
+            pcall(function()
+                local t = tick() % 1
+                -- Smooth shifting reds
+                local r = 0.6 + math.sin(t * 2 * math.pi) * 0.4  -- rich red base
+                local g = 0.05 + math.sin(t * 2 * math.pi + math.pi / 3) * 0.05  -- just enough green to keep from going black
+                local b = 0.05 + math.sin(t * 2 * math.pi + 2 * math.pi / 3) * 0.05 -- same for blue
+
+                setColor(Color3.new(r, g, b))
+            end)
+            task.wait(0.35)
+        end
+        setColor(Color3.new(0, 0, 0)) -- Reset when done
+    end)
+
+    coroutine.resume(getgenv().RedGlowThread)
 end
