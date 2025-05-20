@@ -288,10 +288,10 @@ getgenv().LoadConfigurations = function()
         task.spawn(getgenv().StartLoading("AutoAltFarming")("UsingAltFarming"));
         task.spawn(getgenv().StartLoading("AutoMainFarming")("UsingMainAccountFarming"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku1")("UsingDekuAutofarm1"));
-        --task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
+        task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku3")("UsingDekuAutofarm3"));
         task.spawn(getgenv().StartLoading("AutoConvertTokens")("UsingTokensToCash"));
-        --task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
+        task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
         task.spawn(getgenv().StartLoading("AutoStealingItems")("StealingAnyItem"));
         task.spawn(getgenv().StartLoading("AutoPickingItems")("PickAuraAnyItem"));
         task.spawn(getgenv().StartLoading("AutoSafeZone")("UsingSafeZone"));
