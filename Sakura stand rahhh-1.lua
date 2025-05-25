@@ -2929,7 +2929,7 @@ getgenv().StealingAnyItem = function()
                         local Selected = Parts[math.random(1,#Parts)];
                 
                         if Selected then
-                            Lplayer.Character:SetPrimaryPartCFrame(CFrame.new(Selected.Position - Vector3.new(0,7,0)));
+                            Lplayer.Character:SetPrimaryPartCFrame(CFrame.new(Selected.Position - Vector3.new(0,8,0)));
                         end
                     end
                 end
