@@ -288,7 +288,7 @@ getgenv().LoadConfigurations = function()
         task.spawn(getgenv().StartLoading("AutoAltFarming")("UsingAltFarming"));
         task.spawn(getgenv().StartLoading("AutoMainFarming")("UsingMainAccountFarming"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku1")("UsingDekuAutofarm1"));
-        --task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
+        task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku3")("UsingDekuAutofarm3"));
         task.spawn(getgenv().StartLoading("AutoConvertTokens")("UsingTokensToCash"));
         --task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
@@ -2402,7 +2402,7 @@ getgenv().UsingDekuAutofarm1 = function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
                 if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "Shinra Kusakabe" then
                     for i = 1,100 do
-                        if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "One For All [Stage 4]" then
+                        if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "One for All [Stage 4]" then
                             local args = {"Slot"..i};
                             if i <= 6 then
                                 game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
@@ -2421,7 +2421,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 4]" then
+                if game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     for i = 1,100 do
                         if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
@@ -2443,7 +2443,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
                 pcall(function()
                     local Lplayer = game:GetService("Players").LocalPlayer;
-                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 4]" then
+                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                         Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7150.1806640625,-32.022640228271484,1294.813720703125);
                         for i,v in pairs(game:GetService("Workspace").Map.RuinedCity:GetDescendants()) do
                             if v:IsA("ProximityPrompt") then
@@ -2460,7 +2460,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 3]" then
+                if game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     for i = 1,100 do
                         if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
@@ -2482,7 +2482,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 3]" then
+                if game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     for i = 1,100 do
                         if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
@@ -2507,7 +2507,7 @@ getgenv().UsingDekuAutofarm1 = function()
                 if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "Shinra Kusakabe" then
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     for i = 1, 100 do
-                        if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "OA [Stage 3]" then
+                        if Lplayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "One for All [Stage 3]" then
                             local args = {"Slot"..i};
                             if i <= 6 then
                                 game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
@@ -2526,7 +2526,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One For All [Stage 3]" then task.wait(0.45);
+                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then task.wait(0.45);
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     game:GetService("ReplicatedStorage"):WaitForChild("UseItem"):WaitForChild("OFA"):FireServer();
                     task.wait(0.5);
@@ -2591,7 +2591,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One For All [Stage 4]" then
+                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0;
                 end
             end)
@@ -2709,7 +2709,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
                 pcall(function()
                     local Lplayer = game:GetService("Players").LocalPlayer;
-                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" then
+                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                         Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7150.1806640625,-32.022640228271484,1294.813720703125);
                         for i,v in pairs(game:GetService("Workspace").Map.RuinedCity:GetDescendants()) do
                             if v:IsA("ProximityPrompt") then
@@ -2726,7 +2726,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "OA [Stage 3]" then task.wait(0.45);
+                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then task.wait(0.45);
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     game:GetService("ReplicatedStorage"):WaitForChild("UseItem"):WaitForChild("OFA"):FireServer();
                     task.wait(0.5);
@@ -2774,7 +2774,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" then
+                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0;
                 end
             end)
@@ -4448,6 +4448,18 @@ end)
 AreasTab.newButton("Big Ruined City","",function()
     pcall(function()
         getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-62.55635070800781, 790.7645263671875, -7950.7353515625);
+    end)
+end)
+
+AreasTab.newButton("Void","",function()
+    pcall(function()
+        getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-948.0050048828125, 1011, 43.19108200073242);
+    end)
+end)
+
+AreasTab.newButton("BruningHall","",function()
+    pcall(function()
+        getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2602.805908203125, 631.9755249023438, -3355.756103515625);
     end)
 end)
 
