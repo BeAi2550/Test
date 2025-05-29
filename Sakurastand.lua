@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "2.3";
+getgenv().CurrentVersion = "2.5";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -185,8 +185,8 @@ for i,v in ipairs(game:GetService("Lighting"):GetChildren()) do
 end
 
 -----------------------------------[[ Main Ui Libs ]]------------------------------------------------------------------
-local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaa4801/SakuraStand/main/DrayUI.txt"))();
-local BoredLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaa4801/SakuraStand/main/BoredUI.txt"))();
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/DrayUI.txt"))();
+local BoredLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/BoredUI.txt"))();
 -----------------------------------[[ Main Ui Libs ]]------------------------------------------------------------------
 
 getgenv().StartLoading = function(z)
