@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "2 3";
+getgenv().CurrentVersion = "2.9";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -782,7 +782,7 @@ end
 getgenv().ActivateDekuTheme = function()
     task.spawn(function()
         if getgenv().AutoDekuTheme == true then
-            local DekuTheme = "http://www.roblox.com/asset/?id=13006939528"
+            local DekuTheme = "6409048642"
             local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = DekuTheme
             Sound.Volume = 10;Sound.Looped = true;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
         else
