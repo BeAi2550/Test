@@ -2356,7 +2356,6 @@ getgenv().UsingDekuAutofarm1 = function()
                         end
                         local RolandBoss = game:GetService("Workspace").Living:FindFirstChild("Roland"):FindFirstChild("HumanoidRootPart");
                         Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(RolandBoss.Position - RolandBoss.CFrame.lookVector * 7,RolandBoss.Position);
-                        game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Ignition"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Punch"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Fierce"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Corna"):FireServer();
