@@ -3839,6 +3839,11 @@ getgenv().Attacking = function()
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Punch"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Fierce"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Corna"):FireServer();
+        elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Herrscher of Flamescion" then
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Dawn"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Ash"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Barrier"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Light"):FireServer();
     elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Shadow The World" then
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("TS"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("Knife"):FireServer();
@@ -3908,7 +3913,7 @@ end)
 local FarmingTab = DrRayLibrary.newTab("Farming","http://www.roblox.com/asset/?id=12334656615");
 
 FarmingTab.newLabel("Weekly Reminder   📅");
-FarmingTab.newButton("Read This (Very Important)","",function()
+FarmingTab.newButton("Read This (Not Very Important)","",function()
     BoredLibrary.prompt("Sakura Hub   🌸","Use one teleport toggle at a time!",1.5);
     task.spawn(function()
         local Grrr = "http://www.roblox.com/asset/?id=8603227350";
@@ -3954,9 +3959,9 @@ end)
 FarmingTab.newLabel("Equip Best Farming Spec   📌");
 FarmingTab.newButton("Equip Hie Hie no mi (Best for Private Server Autofarm)","",function()
     pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Hie Hie no mi" then
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Shinra Kusakabe" then
             for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Hie Hie no mi" then
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
                     local args = {"Slot"..i};
                     if i <= 6 then
                         game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
@@ -4110,13 +4115,7 @@ end)
 
 FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
     getgenv().AutofarmOnDeku2 = Value
-
-    if getgenv().AutofarmOnDeku2 == true then
-        BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
-    end
-    --getgenv().UsingDekuAutofarm2();
-end)
-
+        
 FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
     getgenv().AutofarmOnDeku3 = Value
     getgenv().UsingDekuAutofarm3();
