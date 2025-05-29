@@ -3270,7 +3270,7 @@ game:GetService("CoreGui").DrRay.TopBar.TopBarClose.idk.Visible = false;
 BoredLibrary.prompt("Sakura Hub 🌸","Current Version: "..getgenv().CurrentVersion,1.5);
 ---------------------------------[[ Main Source Code 💞 ]]------------------------------------------------------------
 HomeTab.newLabel("Script Hub Credits   ✨");
-HomeTab.newButton("Script Made by Flames Continue By B&M","",function()
+HomeTab.newButton("Script Made by Flames By B&M","",function()
     local Cheers = "http://www.roblox.com/asset/?id=1617624223"
     local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Cheers
     Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
@@ -4111,7 +4111,7 @@ end)
 FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
     getgenv().AutofarmOnDeku2 = Value
 
-   -- if getgenv().AutofarmOnDeku2 == true then
+    if getgenv().AutofarmOnDeku2 == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
     end
     getgenv().UsingDekuAutofarm2();
@@ -4132,7 +4132,7 @@ FarmingTab.newLabel("Auto Stealing Stuff   🧤");
 FarmingTab.newToggle("Auto Steal One For All (Requires Standless)","",getgenv().AutoStealingOfa or false,function(Value)
     getgenv().AutoStealingOfa = Value
 
-   -- if getgenv().AutoStealingOfa == true then
+   if getgenv().AutoStealingOfa == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Patched, Wait for fix.",1.5);
     end
     getgenv().StealingOneForAll();
