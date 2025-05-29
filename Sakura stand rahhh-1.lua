@@ -3270,7 +3270,7 @@ game:GetService("CoreGui").DrRay.TopBar.TopBarClose.idk.Visible = false;
 BoredLibrary.prompt("Sakura Hub 🌸","Current Version: "..getgenv().CurrentVersion,1.5);
 ---------------------------------[[ Main Source Code 💞 ]]------------------------------------------------------------
 HomeTab.newLabel("Script Hub Credits   ✨");
-HomeTab.newButton("Script Made by Flames (Continue By B&M)","",function()
+HomeTab.newButton("Script Made by Flames Continue By B&M","",function()
     local Cheers = "http://www.roblox.com/asset/?id=1617624223"
     local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Cheers
     Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
