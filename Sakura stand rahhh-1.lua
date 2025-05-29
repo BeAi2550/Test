@@ -3270,7 +3270,7 @@ game:GetService("CoreGui").DrRay.TopBar.TopBarClose.idk.Visible = false;
 BoredLibrary.prompt("Sakura Hub 🌸","Current Version: "..getgenv().CurrentVersion,1.5);
 ---------------------------------[[ Main Source Code 💞 ]]------------------------------------------------------------
 HomeTab.newLabel("Script Hub Credits   ✨");
-HomeTab.newButton("Script Made by Flames )Continue By B&M)","",function()
+HomeTab.newButton("Script Made by Flames (Continue By B&M)","",function()
     local Cheers = "http://www.roblox.com/asset/?id=1617624223"
     local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Cheers
     Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
@@ -3839,11 +3839,6 @@ getgenv().Attacking = function()
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Punch"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Fierce"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Corna"):FireServer();
-    elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Herrscher of Flamescion" then
-        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Dawn"):FireServer();
-        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Ash"):FireServer();
-        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Barrier"):FireServer();
-        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Light"):FireServer();
     elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Shadow The World" then
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("TS"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("Knife"):FireServer();
@@ -3957,11 +3952,11 @@ FarmingTab.newButton("Read This (Very Important)","",function()
 end)
 
 FarmingTab.newLabel("Equip Best Farming Spec   📌");
-FarmingTab.newButton("Equip Hie Hie no mi (Best for Private Server Autofarm)","",function()
+FarmingTab.newButton("Equip Shinra Kusakabe(Best for Private Server Autofarm)","",function()
     pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Hie Hie no mi" then
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Shinra Kusakabe" then
             for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Hie Hie no mi" then
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shinra Kusakabe" then
                     local args = {"Slot"..i};
                     if i <= 6 then
                         game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
@@ -3976,7 +3971,7 @@ FarmingTab.newButton("Equip Hie Hie no mi (Best for Private Server Autofarm)",""
     end)
 end)
 
-FarmingTab.newLabel("Statistics GUI   📊");
+FarmingTab.newLabel("Statistics GUI (Not Work)  📊");
 FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
     getgenv().ToggleStatisticsGUI = Value
     game:GetService("CoreGui").StatisticsGUI.Enabled = getgenv().ToggleStatisticsGUI;
@@ -4116,10 +4111,10 @@ end)
 FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
     getgenv().AutofarmOnDeku2 = Value
 
-    if getgenv().AutofarmOnDeku2 == true then
+   -- if getgenv().AutofarmOnDeku2 == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
     end
-    --getgenv().UsingDekuAutofarm2();
+    getgenv().UsingDekuAutofarm2();
 end)
 
 FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
@@ -4137,10 +4132,10 @@ FarmingTab.newLabel("Auto Stealing Stuff   🧤");
 FarmingTab.newToggle("Auto Steal One For All (Requires Standless)","",getgenv().AutoStealingOfa or false,function(Value)
     getgenv().AutoStealingOfa = Value
 
-    if getgenv().AutoStealingOfa == true then
+   -- if getgenv().AutoStealingOfa == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Patched, Wait for fix.",1.5);
     end
-    --getgenv().StealingOneForAll();
+    getgenv().StealingOneForAll();
 end)
 
 FarmingTab.newToggle("Auto Steal Any Item  (Doesnt go with Autofarm)","",getgenv().AutoStealingItems or false,function(Value)
