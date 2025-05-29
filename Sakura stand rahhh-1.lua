@@ -782,7 +782,7 @@ end
 getgenv().ActivateDekuTheme = function()
     task.spawn(function()
         if getgenv().AutoDekuTheme == true then
-            local DekuTheme = "6409048642"
+            local DekuTheme = "http://www.roblox.com/asset/?id=6409048642"
             local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = DekuTheme
             Sound.Volume = 10;Sound.Looped = true;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
         else
