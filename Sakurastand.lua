@@ -291,7 +291,7 @@ getgenv().LoadConfigurations = function()
         task.spawn(getgenv().StartLoading("AutofarmOnDeku2")("UsingDekuAutofarm2"));
         task.spawn(getgenv().StartLoading("AutofarmOnDeku3")("UsingDekuAutofarm3"));
         task.spawn(getgenv().StartLoading("AutoConvertTokens")("UsingTokensToCash"));
-        --task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
+        task.spawn(getgenv().StartLoading("AutoStealingOfa")("StealingOneForAll"));
         task.spawn(getgenv().StartLoading("AutoStealingItems")("StealingAnyItem"));
         task.spawn(getgenv().StartLoading("AutoPickingItems")("PickAuraAnyItem"));
         task.spawn(getgenv().StartLoading("AutoSafeZone")("UsingSafeZone"));
@@ -782,7 +782,7 @@ end
 getgenv().ActivateDekuTheme = function()
     task.spawn(function()
         if getgenv().AutoDekuTheme == true then
-            local DekuTheme = "http://www.roblox.com/asset/?id=13006939528"
+            local DekuTheme = "http://www.roblox.com/asset/?id=6409048642"
             local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = DekuTheme
             Sound.Volume = 10;Sound.Looped = true;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
         else
@@ -1135,8 +1135,8 @@ end
 
 getgenv().AutoGodModding = function()
     getgenv().HealthRespawn = 195;
-    getgenv().GuildName = "Szechuan";
-    getgenv().Password = "pepper";
+    getgenv().GuildName = "Herrscher of the Void's Army";
+    getgenv().Password = "2000";
 
     task.spawn(function()
         while getgenv().AutoRespawning == true do
@@ -2021,7 +2021,7 @@ getgenv().PublicServerAutofarm = function()
     task.spawn(function()
         while getgenv().AutoPublicGrinding == true do
             pcall(function()
-                local args = {[1] = "/e sadcat"};
+                local args = {[1] = "/e gangnam"};
                 game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("Chatted"):FireServer(unpack(args));
             end)
             task.wait(0.35);
@@ -2250,7 +2250,7 @@ getgenv().StoredOFA = function()
     task.spawn(function()
         while getgenv().AutoStoreStageOne == true do
             pcall(function()
-                if game:GetService("Players").LocalPlayer.Data.StandName.Value == "OA [Stage 1]" and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled or getgenv().FoundAnything == false and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled then
+                if game:GetService("Players").LocalPlayer.Data.StandName.Value == "One for All [Stage 1]" and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled or getgenv().FoundAnything == false and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled then
                     for i = 1,95 do -- Supports up to 95 stand slots :O
                         if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Standless" then
                             local args = {"Slot"..i};
@@ -2929,7 +2929,7 @@ getgenv().StealingAnyItem = function()
                         local Selected = Parts[math.random(1,#Parts)];
                 
                         if Selected then
-                            Lplayer.Character:SetPrimaryPartCFrame(CFrame.new(Selected.Position - Vector3.new(0,7,0)));
+                            Lplayer.Character:SetPrimaryPartCFrame(CFrame.new(Selected.Position - Vector3.new(0,8,0)));
                         end
                     end
                 end
@@ -3257,8 +3257,8 @@ local MainWindow = DrRayLibrary:Load("Sakura Hub   🌸","Default");
 local HomeTab = DrRayLibrary.newTab("Home","http://www.roblox.com/asset/?id=9405923687");
 
 -- // Apply Custom UI Color \\ --
-game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(0,0,0);
-game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(0,0,0);
+game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(138,43,226);
+game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(138,43,226);
 game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(0,0,0);
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.Clock.BackgroundTransparency = 0.75;
 game:GetService("CoreGui").DrRay.TopBar.ProfileMenu.PlayerProfile.BackgroundTransparency = 0.75;
@@ -3270,7 +3270,7 @@ game:GetService("CoreGui").DrRay.TopBar.TopBarClose.idk.Visible = false;
 BoredLibrary.prompt("Sakura Hub 🌸","Current Version: "..getgenv().CurrentVersion,1.5);
 ---------------------------------[[ Main Source Code 💞 ]]------------------------------------------------------------
 HomeTab.newLabel("Script Hub Credits   ✨");
-HomeTab.newButton("Script Made by Flames","",function()
+HomeTab.newButton("Script Made by Flames Continue by Be&M","",function()
     local Cheers = "http://www.roblox.com/asset/?id=1617624223"
     local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Cheers
     Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
@@ -3456,14 +3456,14 @@ HomeTab.newToggle("Auto Bug Players / Mobs (Requires Grab Moves)","",getgenv().A
 end)
 
 HomeTab.newLabel("Available Working Codes (Report to me if stopped working)");
-local Code1 = "Kafk-ISTHATTHEREDMIST";
-local Code2 = "SFCOpen4Business";
-local Code3 = "freeRedMistPercent";
-local Code4 = "GiftFromSFC";
-local Code5 = "RolandAndFriends";
-local Code6 = "Kaiju-8";
-local Code7 = "KuzmaToldMeToAddThisCode";
-local Code8 = "3b5tsM79-^#>^<&(@!'~";
+local Code1 = "The Wonder of You";
+local Code2 = "CarrotFromThatGame";
+local Code3 = "ElectricClaws";
+local Code4 = "HappyEaster";
+local Code5 = "waaa";
+local Code6 = "That";
+local Code7 = "All";
+local Code8 = "For Now";
 
 HomeTab.newButton('Use Code: "'..Code1..'"','',function()
     BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code1,1.5);
@@ -3513,18 +3513,18 @@ HomeTab.newButton('Use Code: "'..Code8..'"','',function()
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
 end)
 
-HomeTab.newLabel("Server Hop Scripts   🌐");
-HomeTab.newButton("Auto find The Arbiter   🌟  (Copied to Clipboard)","",function()
+--HomeTab.newLabel("Server Hop Scripts   🌐");
+--HomeTab.newButton("Auto find The Arbiter   🌟  (Copied to Clipboard)","",function()
     setclipboard("https://github.com/Lvl9999/TheArbiter/tree/main");
     BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
 end)
 
-HomeTab.newButton("Auto find Space Curse   ☄️  (Copied to Clipboard)","",function()
+--HomeTab.newButton("Auto find Space Curse   ☄️  (Copied to Clipboard)","",function()
     setclipboard("https://github.com/Lvl9999/SpaceCurse/tree/main");
     BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
 end)
 
-HomeTab.newButton("Auto One For All Finder   🦸  (PATCHED)","",function()
+--HomeTab.newButton("Auto One For All Finder   🦸  (Beta)","",function()
     --setclipboard("https://github.com/Lvl9999/OneForAll/tree/main");
     BoredLibrary.prompt("Sakura Hub  🌸","Patched, Wait for fix",0.5);
 end)
@@ -3550,8 +3550,8 @@ HomeTab.newButton("Teleport Maker","",function()
     loadstring(game:HttpGet("https://pastebin.com/raw/GSgUCJmq"))();
 end)
 
-HomeTab.newLabel("Sakura Hub Stuff  🌸");
-HomeTab.newButton("Official Discord Server (Copied to Clipboard)","",function()
+--HomeTab.newLabel("Sakura Hub Stuff  🌸");
+--HomeTab.newButton("Official Discord Server (Copied to Clipboard)","",function()
     setclipboard("https://discord.gg/XcUFRW4DWH");
     BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
 end)
@@ -3650,7 +3650,7 @@ end)
 
 HomeTab.newButton("Reload Sakura Hub","",function()
     task.spawn(function()BoredLibrary.prompt("Sakura Hub  🌸","Reloading Hub...",0.75);end)
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakurastand.lua";
 
     pcall(function()
         getgenv().Configurations();loadstring(game:HttpGet(getgenv().SakuraHub))();
@@ -3669,14 +3669,14 @@ end)
 
 HomeTab.newButton("Reset Sakura Hub Config","",function()
     task.spawn(function()getgenv().Configurations();getgenv().ResetConfigurations();end)
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/SakuraHub";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakurastand.lua";
 
     pcall(function()
         getgenv().Configurations();loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 end)
 
-HomeTab.newInput("Report Bugs / Feedback","Type here anything you want me to know :)",function(text)
+HomeTab.newInput("Report Bugs / Feedback","Dont Send Anything Because I Can't Read:)",function(text)
     getgenv().Message = text
     getgenv().WebHook = "https://discord.com/api/webhooks/1259740370682777670/YmJ7rSmWPKa8cjY_v5fyusXeyQF5x9TjiCDJhHUAtGIzsX_PWacUkSCqEU8x8iXloFiD";
 
@@ -3903,7 +3903,7 @@ end)
 
 local FarmingTab = DrRayLibrary.newTab("Farming","http://www.roblox.com/asset/?id=12334656615");
 
-FarmingTab.newLabel("Weekly Reminder   📅");
+FarmingTab.newLabel("Monthly Reminder   📅");
 FarmingTab.newButton("Read This (Very Important)","",function()
     BoredLibrary.prompt("Sakura Hub   🌸","Use one teleport toggle at a time!",1.5);
     task.spawn(function()
@@ -3967,7 +3967,7 @@ FarmingTab.newButton("Equip Shinra Kusakabe (Best for Private Server Autofarm)",
     end)
 end)
 
-FarmingTab.newLabel("Statistics GUI   📊");
+FarmingTab.newLabel("Statistics GUI Not Really Work 📊");
 FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
     getgenv().ToggleStatisticsGUI = Value
     game:GetService("CoreGui").StatisticsGUI.Enabled = getgenv().ToggleStatisticsGUI;
@@ -4094,6 +4094,7 @@ FarmingTab.newButton("Quick Explanation (Open F9 Console)","",function()
         print("Without Support meaning u wll do autofarm alone just by urself until cash runs out.");
         print("With Support meaning u wll do autofarm only when deku or roland spawns. (Soon)");
         print("Support Account meaning u wll do spawn deku/roland for 'With Support Account'.");
+        print("make sure that all hallow spawn in hueco mundo");    
         warn("--------------[Best Settings]--------------");
         print("The best title to use is The Intelligent (Obtained by buying from laptop).");
     end)
@@ -4107,10 +4108,10 @@ end)
 FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
     getgenv().AutofarmOnDeku2 = Value
 
-    if getgenv().AutofarmOnDeku2 == true then
+    --if getgenv().AutofarmOnDeku2 == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
     end
-    --getgenv().UsingDekuAutofarm2();
+    getgenv().UsingDekuAutofarm2();
 end)
 
 FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
@@ -4128,10 +4129,10 @@ FarmingTab.newLabel("Auto Stealing Stuff   🧤");
 FarmingTab.newToggle("Auto Steal One For All (Requires Standless)","",getgenv().AutoStealingOfa or false,function(Value)
     getgenv().AutoStealingOfa = Value
 
-    if getgenv().AutoStealingOfa == true then
+   --if getgenv().AutoStealingOfa == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Patched, Wait for fix.",1.5);
     end
-    --getgenv().StealingOneForAll();
+    getgenv().StealingOneForAll();
 end)
 
 FarmingTab.newToggle("Auto Steal Any Item  (Doesnt go with Autofarm)","",getgenv().AutoStealingItems or false,function(Value)
@@ -4519,6 +4520,53 @@ task.spawn(function()
         getgenv().ToggleVisibility = true;
     end
 end) task.spawn(function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/StatisticsGUI"))();end)
+
+getgenv().UsingRainbowUI = function()
+    local gui = game:GetService("CoreGui")
+    local topBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("TopBar")
+    local mainBar = gui:FindFirstChild("DrRay") and gui.DrRay:FindFirstChild("MainBar")
+    local statsFrame = gui:FindFirstChild("StatisticsGUI") and gui.StatisticsGUI:FindFirstChild("Frame")
+
+    local function setColor(color)
+        if topBar then
+            topBar.BackgroundColor3 = color
+            if topBar:FindFirstChild("TopBar") then
+                topBar.TopBar.BackgroundColor3 = color
+            end
+        end
+        if mainBar then
+            mainBar.BackgroundColor3 = color
+        end
+        if statsFrame then
+            statsFrame.BackgroundColor3 = color
+        end
+    end
+
+    -- If disabled, reset to black and exit
+    if not getgenv().AutoGoingRainbow then
+        setColor(Color3.new(0, 0, 0))
+        return
+    end
+
+    -- Start the rainbow loop
+    getgenv().RainbowThread = coroutine.create(function()
+        while getgenv().AutoGoingRainbow do
+            pcall(function()
+                local t = tick() % 1
+                local r = math.sin(t * 2 * math.pi) * 0.5 + 0.5
+                local g = math.sin(t * 2 * math.pi + 2 * math.pi / 3) * 0.5 + 0.5
+                local b = math.sin(t * 2 * math.pi + 4 * math.pi / 3) * 0.5 + 0.5
+
+                setColor(Color3.new(r, g, b))
+            end)
+            task.wait(0.35)
+        end
+        setColor(Color3.new(0, 0, 0)) -- reset when loop ends
+    end)
+
+    coroutine.resume(getgenv().RainbowThread)
+end
+
 
 
 
