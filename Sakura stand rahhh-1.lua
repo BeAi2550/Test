@@ -3839,6 +3839,11 @@ getgenv().Attacking = function()
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Punch"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Fierce"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Corna"):FireServer();
+    elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Herrscher of Flamescion" then
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Dawn"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Ash"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Barrier"):FireServer();
+        game:GetService("ReplicatedStorage"):WaitForChild("MidknightRemote"):WaitForChild("Light"):FireServer();
     elseif game:GetService("Players").LocalPlayer.Data.StandName.Value == "Shadow The World" then
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("TS"):FireServer();
         game:GetService("ReplicatedStorage"):WaitForChild("STWRemote"):WaitForChild("Knife"):FireServer();
