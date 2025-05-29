@@ -4111,10 +4111,10 @@ end)
 FarmingTab.newToggle("Start Farming (With Support)","",getgenv().AutofarmOnDeku2 or false,function(Value)
     getgenv().AutofarmOnDeku2 = Value
 
-    if getgenv().AutofarmOnDeku2 == true then
+    --if getgenv().AutofarmOnDeku2 == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Soon, Wait for update.",1.5);
     end
-    --getgenv().UsingDekuAutofarm2();
+    getgenv().UsingDekuAutofarm2();
 end)
 
 FarmingTab.newToggle("Start Farming (Support Account)","",getgenv().AutofarmOnDeku3 or false,function(Value)
@@ -4132,10 +4132,10 @@ FarmingTab.newLabel("Auto Stealing Stuff   🧤");
 FarmingTab.newToggle("Auto Steal One For All (Requires Standless)","",getgenv().AutoStealingOfa or false,function(Value)
     getgenv().AutoStealingOfa = Value
 
-    if getgenv().AutoStealingOfa == true then
+    --if getgenv().AutoStealingOfa == true then
         BoredLibrary.prompt("Sakura Hub 🌸","Patched, Wait for fix.",1.5);
     end
-    --getgenv().StealingOneForAll();
+    getgenv().StealingOneForAll();
 end)
 
 FarmingTab.newToggle("Auto Steal Any Item  (Doesnt go with Autofarm)","",getgenv().AutoStealingItems or false,function(Value)
