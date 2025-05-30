@@ -2382,7 +2382,6 @@ getgenv().UsingDekuAutofarm1 = function()
                         end
                         local DekuBoss = game:GetService("Workspace").Living:FindFirstChild("Deku"):FindFirstChild("HumanoidRootPart");
                         Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(DekuBoss.Position - DekuBoss.CFrame.lookVector * 7,DekuBoss.Position);
-                        game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Ignition"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Punch"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Fierce"):FireServer();
                         game:GetService("ReplicatedStorage"):WaitForChild("ShinraRemote"):WaitForChild("Corna"):FireServer();
@@ -2708,7 +2707,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
                 pcall(function()
                     local Lplayer = game:GetService("Players").LocalPlayer;
-                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" then
+                    if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and not Lplayer.Backpack:FindFirstChild("OA's Grace") and not Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "One for All [Stage 4]" then
                         Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7150.1806640625,-32.022640228271484,1294.813720703125);
                         for i,v in pairs(game:GetService("Workspace").Map.RuinedCity:GetDescendants()) do
                             if v:IsA("ProximityPrompt") then
@@ -2725,7 +2724,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "OA [Stage 3]" then task.wait(0.45);
+                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then task.wait(0.45);
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     game:GetService("ReplicatedStorage"):WaitForChild("UseItem"):WaitForChild("OFA"):FireServer();
                     task.wait(0.5);
@@ -2773,7 +2772,7 @@ getgenv().UsingDekuAutofarm3 = function()
         while getgenv().AutofarmOnDeku3 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "OA [Stage 4]" then
+                if Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "Ond for all [Stage 3]" or Lplayer.PlayerGui.InCombat.Enabled and Lplayer.Data.StandName.Value == "Onr for All [Stage 4]" then
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0;
                 end
             end)
