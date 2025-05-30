@@ -3080,7 +3080,7 @@ getgenv().RollArcadeBanner = function()
                 local args = {[1] = false,[2] = true};
                 game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("ArcadePurchase"):FireServer(unpack(args));             
             end)
-            task.wait(1.25);
+            task.wait(0.25);
         end
     end)
 end
