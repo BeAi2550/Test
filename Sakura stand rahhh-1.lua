@@ -2813,6 +2813,9 @@ getgenv().StealingOneForAll = function()
     
                                         game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,true,SkipDialogue,5);
                                         game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,false,SkipDialogue,5);
+                                         local args = {}
+
+                                        game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes", 9e9):WaitForChild("ObtainOFA", 9e9):FireServer(unpack(args))       
                                     end
                                 end
                             end
@@ -3306,6 +3309,13 @@ HomeTab.newButton("Reset Character (Gets rid of Combat Mark)","",function()
     task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SukunaDialogue"):FireServer(unpack(args));
+end)
+
+HomeTab.newButton("beta get one for all manuals","",function()
+    task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
+    local args = {}
+
+    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes", 9e9):WaitForChild("ObtainOFA", 9e9):FireServer(unpack(args))
 end)
 
 HomeTab.newButton("Insta Respawn Character (Gets rid of Combat Mark)","",function()
