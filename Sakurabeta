@@ -1,0 +1,43 @@
+--// Setup
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ToggleGui"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = playerGui
+
+--// Main Frame
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 300, 0, 200)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Frame.Visible = true
+Frame.Parent = ScreenGui
+
+--// Mobile Toggle Button
+local ToggleButton = Instance.new("TextButton")
+ToggleButton.Size = UDim2.new(0, 100, 0, 40)
+ToggleButton.Position = UDim2.new(0, 10, 1, -50)
+ToggleButton.BackgroundColor3 = Color3.fromRGB(120, 0, 180)
+ToggleButton.TextColor3 = Color3.new(1, 1, 1)
+ToggleButton.Text = "Toggle GUI"
+ToggleButton.TextScaled = true
+ToggleButton.Parent = ScreenGui
+
+--// Remote setup
+local args = {}
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ObtainOFA = ReplicatedStorage:WaitForChild("GlobalUsedRemotes", 9e9):WaitForChild("ObtainOFA", 9e9)
+
+--// Toggle function
+local function toggleGUI()
+	Frame.Visible = not Frame.Visible
+	if Frame.Visible then
+		-- Fire the remote when GUI is shown
+		ObtainOFA:FireServer(unpack(args))
+	end
+end
+
+--// Button click
+ToggleButton.MouseButton1Click:Connect(toggleGUI)
