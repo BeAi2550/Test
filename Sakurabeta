@@ -3,27 +3,40 @@ local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ToggleGui"
+ScreenGui.Name = "GalaxyToggleUI"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.Parent = playerGui
 
---// Main Frame
-local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 300, 0, 200)
-Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
-Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-Frame.Visible = true
-Frame.Parent = ScreenGui
+--// Galaxy Background Image
+local backgroundImage = Instance.new("ImageLabel")
+backgroundImage.Size = UDim2.new(0, 300, 0, 200)
+backgroundImage.Position = UDim2.new(0.5, -150, 0.5, -100)
+backgroundImage.BackgroundTransparency = 1
+backgroundImage.Image = "rbxassetid://11223853964" -- Galaxy background image ID
+backgroundImage.ScaleType = Enum.ScaleType.Crop
+backgroundImage.Visible = true
+backgroundImage.Parent = ScreenGui
+
+--// Optional inner frame (for content)
+local innerFrame = Instance.new("Frame")
+innerFrame.Size = UDim2.new(1, -20, 1, -20)
+innerFrame.Position = UDim2.new(0, 10, 0, 10)
+innerFrame.BackgroundColor3 = Color3.fromRGB(40, 0, 70)
+innerFrame.BackgroundTransparency = 0.3
+innerFrame.BorderSizePixel = 0
+innerFrame.Parent = backgroundImage
 
 --// Mobile Toggle Button
-local ToggleButton = Instance.new("TextButton")
-ToggleButton.Size = UDim2.new(0, 100, 0, 40)
-ToggleButton.Position = UDim2.new(0, 10, 1, -50)
-ToggleButton.BackgroundColor3 = Color3.fromRGB(120, 0, 180)
-ToggleButton.TextColor3 = Color3.new(1, 1, 1)
-ToggleButton.Text = "Toggle GUI"
-ToggleButton.TextScaled = true
-ToggleButton.Parent = ScreenGui
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(0, 120, 0, 45)
+toggleButton.Position = UDim2.new(0, 10, 1, -55)
+toggleButton.BackgroundColor3 = Color3.fromRGB(180, 100, 255)
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.Text = "🌌 Toggle GUI"
+toggleButton.Font = Enum.Font.GothamBold
+toggleButton.TextScaled = true
+toggleButton.AutoButtonColor = true
+toggleButton.Parent = ScreenGui
 
 --// Remote setup
 local args = {}
@@ -32,12 +45,11 @@ local ObtainOFA = ReplicatedStorage:WaitForChild("GlobalUsedRemotes", 9e9):WaitF
 
 --// Toggle function
 local function toggleGUI()
-	Frame.Visible = not Frame.Visible
-	if Frame.Visible then
-		-- Fire the remote when GUI is shown
+	backgroundImage.Visible = not backgroundImage.Visible
+	if backgroundImage.Visible then
 		ObtainOFA:FireServer(unpack(args))
 	end
 end
 
 --// Button click
-ToggleButton.MouseButton1Click:Connect(toggleGUI)
+toggleButton.MouseButton1Click:Connect(toggleGUI)
