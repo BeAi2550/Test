@@ -2804,7 +2804,7 @@ getgenv().StealingOneForAll = function()
         while getgenv().AutoStealingOfa == true do
             pcall(function()
                 if game:GetService("Players").LocalPlayer.Data.StandName.Value == "Standless" then
-                    if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 3 then
+                    if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 2 then
                         if workspace.Map.NPCs:FindFirstChild("Kuzma") then
                             for i,v in pairs(game:GetService("Workspace").Map.NPCs.Kuzma:GetChildren()) do
                                 if v:IsA("ClickDetector") then fireclickdetector(v);
