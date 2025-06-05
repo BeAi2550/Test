@@ -99,6 +99,7 @@ end)
 
 --// Toggle OFA Button
 local ofaToggled = false
+local ofaLoopThread
 
 local ofaButton = Instance.new("TextButton")
 ofaButton.Size = UDim2.new(0, 160, 0, 40)
@@ -110,6 +111,16 @@ ofaButton.Font = Enum.Font.GothamBold
 ofaButton.TextScaled = true
 ofaButton.Parent = innerFrame
 
+--// Looping Remote Fire
+local function startOFA()
+	ofaLoopThread = task.spawn(function()
+		while ofaToggled do
+			ObtainOFA:FireServer(unpack(args))
+			task.wait(1) -- Fire every 1 second (you can change this)
+		end
+	end)
+end
+
 --// Toggle Logic
 local function toggleOFA()
 	ofaToggled = not ofaToggled
@@ -117,13 +128,14 @@ local function toggleOFA()
 	if ofaToggled then
 		ofaButton.Text = "⚡ OFA: ON"
 		ofaButton.BackgroundColor3 = Color3.fromRGB(80, 200, 120)
-		-- Fire remote when toggled ON
-		ObtainOFA:FireServer(unpack(args))
+		startOFA()
 	else
 		ofaButton.Text = "🔌 OFA: OFF"
 		ofaButton.BackgroundColor3 = Color3.fromRGB(120, 60, 180)
+		if ofaLoopThread then
+			task.cancel(ofaLoopThread)
+		end
 	end
 end
 
 ofaButton.MouseButton1Click:Connect(toggleOFA)
-
