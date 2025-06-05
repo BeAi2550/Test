@@ -96,3 +96,34 @@ remoteButton.Parent = innerFrame
 remoteButton.MouseButton1Click:Connect(function()
 	ObtainOFA:FireServer(unpack(args))
 end)
+
+--// Toggle OFA Button
+local ofaToggled = false
+
+local ofaButton = Instance.new("TextButton")
+ofaButton.Size = UDim2.new(0, 160, 0, 40)
+ofaButton.Position = UDim2.new(0.5, -80, 0.5, -20)
+ofaButton.BackgroundColor3 = Color3.fromRGB(120, 60, 180)
+ofaButton.TextColor3 = Color3.new(1, 1, 1)
+ofaButton.Text = "🔌 OFA: OFF"
+ofaButton.Font = Enum.Font.GothamBold
+ofaButton.TextScaled = true
+ofaButton.Parent = innerFrame
+
+--// Toggle Logic
+local function toggleOFA()
+	ofaToggled = not ofaToggled
+
+	if ofaToggled then
+		ofaButton.Text = "⚡ OFA: ON"
+		ofaButton.BackgroundColor3 = Color3.fromRGB(80, 200, 120)
+		-- Fire remote when toggled ON
+		ObtainOFA:FireServer(unpack(args))
+	else
+		ofaButton.Text = "🔌 OFA: OFF"
+		ofaButton.BackgroundColor3 = Color3.fromRGB(120, 60, 180)
+	end
+end
+
+ofaButton.MouseButton1Click:Connect(toggleOFA)
+
