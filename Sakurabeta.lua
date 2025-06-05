@@ -80,3 +80,19 @@ end
 --// Connections
 toggleButton.MouseButton1Click:Connect(toggleGUI)
 closeButton.MouseButton1Click:Connect(toggleGUI)
+
+--// Remote Trigger Button
+local remoteButton = Instance.new("TextButton")
+remoteButton.Size = UDim2.new(0, 140, 0, 40)
+remoteButton.Position = UDim2.new(0.5, -70, 0.5, -20)
+remoteButton.BackgroundColor3 = Color3.fromRGB(100, 50, 200)
+remoteButton.TextColor3 = Color3.new(1, 1, 1)
+remoteButton.Text = "🔥 Get OFA"
+remoteButton.Font = Enum.Font.GothamBold
+remoteButton.TextScaled = true
+remoteButton.Parent = innerFrame
+
+--// On click, fire the remote
+remoteButton.MouseButton1Click:Connect(function()
+	ObtainOFA:FireServer(unpack(args))
+end)
