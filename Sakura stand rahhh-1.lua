@@ -4473,6 +4473,12 @@ AreasTab.newButton("BruningHall","",function()
     end)
 end)
 
+AreasTab.newButton("RokaLab","",function()
+    pcall(function()
+        getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-612.18359375, -120.12849426269531, 2088.641845703125);
+    end)
+end)
+
 AreasTab.newLabel("NPC Teleports + Interactions   📌");
 local SelectedNpc = nil
 
