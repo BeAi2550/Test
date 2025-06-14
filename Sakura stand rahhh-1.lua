@@ -4499,6 +4499,25 @@ AreasTab.newButton("Teleport To Npc","",function()
     end)
 end)
 
+AreasTab.newButton("Equip Cross","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Cross" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Cross" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Cross",0.5);end);
+        end
+    end)
+end)
+
 -- // Apply Custom Tab Colors \\ --
 local Tabs = {
     game:GetService("CoreGui").DrRay.MainBar.Home;
