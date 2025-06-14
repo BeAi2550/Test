@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "3.0";
+getgenv().CurrentVersion = "4.8";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -4514,6 +4514,101 @@ AreasTab.newButton("Equip Cross","",function()
             end
         else
             task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Cross",0.5);end);
+        end
+    end)
+end)
+
+AreasTab.newButton("Equip Midknight (Vessel of Life)","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Midknight (Vessel of Life)" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Midknight (Vessel of Life)" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Midknight (Vessel of Life)",0.5);end);
+        end
+    end)
+end)
+
+AreasTab.newButton("Equip Coyote Starrk","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Coyote Starrk" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Coyote Starrk" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Coyote Starrk",0.5);end);
+        end
+    end)
+end)
+
+AreasTab.newButton("Equip Emperor","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Emperor" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Emperor" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Emperor",0.5);end);
+        end
+    end)
+end)
+
+AreasTab.newButton("Equip ShadowTheWorld","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Shadow The World" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shadow The World" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Cross",0.5);end);
+        end
+    end)
+end)
+
+AreasTab.newButton("Equip Ryomen Sukuna","",function()
+    pcall(function()
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Ryomen Sukuna" then
+            for i = 1,100 do
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Ryomen Sukuna" then
+                    local args = {"Slot"..i};
+                    if i <= 6 then
+                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
+                    else
+                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
+                    end
+                end
+            end
+        else
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Ryomen Sukuna",0.5);end);
         end
     end)
 end)
