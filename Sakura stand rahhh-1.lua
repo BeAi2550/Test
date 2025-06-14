@@ -4258,6 +4258,15 @@ getgenv().PlaySound = function()
     Sound.Volume = 5;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
 end
 
+local AreasTab = DrRayLibrary.newTab("UseSpec","http://www.roblox.com/asset/?id=6723742952");
+
+getgenv().PlaySound = function()
+    local Playlist = {"http://www.roblox.com/asset/?id=289556450","http://www.roblox.com/asset/?id=2642969814"};
+
+    local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Playlist[math.random(1,#Playlist)];
+    Sound.Volume = 5;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
+end
+
 AreasTab.newLabel("Teleports   🗺️  (You can Teleport people with you, Just grab them first)");
 AreasTab.newButton("Shop","",function()
     pcall(function()
