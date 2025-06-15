@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "4.8";
+getgenv().CurrentVersion = "4.9";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
