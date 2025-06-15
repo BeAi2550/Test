@@ -4558,6 +4558,41 @@ AreasTab.newButton("Equip Deku","",function()
     end)
 end)
 
+local SelectedStand = "Cross" -- default
+
+-- Create textbox to input stand name
+AreasTab:CreateTextBox("Stand Name", "Type Stand Name Here", function(text)
+    SelectedStand = text
+end)
+
+-- Button to equip the stand
+AreasTab.newButton("Equip Stand", "", function()
+    pcall(function()
+        local plr = game:GetService("Players").LocalPlayer
+        if plr.Data.StandName.Value ~= SelectedStand then
+            local guiSlots = plr.PlayerGui.StandStorage.Outer.Inner.Inner
+            local storageRemote = game:GetService("ReplicatedStorage").StorageRemote
+
+            for i = 1, 100 do
+                local slot = guiSlots["Slot"..i]
+                if slot and slot.Text.Text == SelectedStand then
+                    if i <= 6 then
+                        storageRemote["Slot"..i]:FireServer()
+                    else
+                        storageRemote.UseStorageExtra:FireServer("Slot"..i)
+                    end
+                    break
+                end
+            end
+        else
+            task.spawn(function()
+                BoredLibrary.prompt("Sakura Hub 🌸", "You're already using "..SelectedStand, 0.5)
+            end)
+        end
+    end)
+end)
+
+
 
 -- // Apply Custom Tab Colors \\ --
 local Tabs = {
