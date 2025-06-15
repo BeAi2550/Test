@@ -327,9 +327,9 @@ getgenv().SuperSpeed = function()
                         local hb = game:GetService("RunService").Heartbeat
                         local delta = hb:Wait()
                         if hum.MoveDirection.Magnitude > 0 then
-                            chr:TranslateBy(hum.MoveDirection * 5 * delta * 5);
+                            chr:TranslateBy(hum.MoveDirection * 9 * delta * 9);
                         else
-                            chr:TranslateBy(hum.MoveDirection * delta * 5);
+                            chr:TranslateBy(hum.MoveDirection * delta * 9);
                         end
                     end
                 end
@@ -4556,62 +4556,6 @@ AreasTab.newButton("Equip Coyote Starrk","",function()
     end)
 end)
 
-AreasTab.newButton("Equip Emperor","",function()
-    pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Emperor" then
-            for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Emperor" then
-                    local args = {"Slot"..i};
-                    if i <= 6 then
-                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
-                    else
-                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
-                    end
-                end
-            end
-        else
-            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Emperor",0.5);end);
-        end
-    end)
-end)
-
-AreasTab.newButton("Equip ShadowTheWorld","",function()
-    pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Shadow The World" then
-            for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Shadow The World" then
-                    local args = {"Slot"..i};
-                    if i <= 6 then
-                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
-                    else
-                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
-                    end
-                end
-            end
-        else
-            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Cross",0.5);end);
-        end
-    end)
-end)
-
-AreasTab.newButton("Equip Ryomen Sukuna","",function()
-    pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Ryomen Sukuna" then
-            for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Ryomen Sukuna" then
-                    local args = {"Slot"..i};
-                    if i <= 6 then
-                        game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
-                    else
-                        game:GetService("ReplicatedStorage").StorageRemote.UseStorageExtra:FireServer(unpack(args));
-                    end
-                end
-            end
-        else
-            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Ryomen Sukuna",0.5);end);
-        end
-    end)
-end)
 
 -- // Apply Custom Tab Colors \\ --
 local Tabs = {
