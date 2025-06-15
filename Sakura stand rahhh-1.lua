@@ -4499,6 +4499,8 @@ AreasTab.newButton("Teleport To Npc","",function()
     end)
 end)
 
+AreasTab.newLabel("Equip Spec (not work if had multiple same spec)");
+
 AreasTab.newButton("Equip Cross","",function()
     pcall(function()
         if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Cross" then
@@ -4537,11 +4539,11 @@ AreasTab.newButton("Equip Midknight (Vessel of Life)","",function()
     end)
 end)
 
-AreasTab.newButton("Equip Coyote Starrk","",function()
+AreasTab.newButton("Equip Deku","",function()
     pcall(function()
-        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Coyote Starrk" then
+        if game:GetService("Players").LocalPlayer.Data.StandName.Value ~= "Deku" then
             for i = 1,100 do
-                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Coyote Starrk" then
+                if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Deku" then
                     local args = {"Slot"..i};
                     if i <= 6 then
                         game:GetService("ReplicatedStorage").StorageRemote["Slot"..i]:FireServer();
@@ -4551,7 +4553,7 @@ AreasTab.newButton("Equip Coyote Starrk","",function()
                 end
             end
         else
-            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Coyote Starrk",0.5);end);
+            task.spawn(function()BoredLibrary.prompt("Sakura Hub   🌸","You are Already Deku",0.5);end);
         end
     end)
 end)
