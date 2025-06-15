@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "4.9";
+getgenv().CurrentVersion = "5.0";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -327,9 +327,9 @@ getgenv().SuperSpeed = function()
                         local hb = game:GetService("RunService").Heartbeat
                         local delta = hb:Wait()
                         if hum.MoveDirection.Magnitude > 0 then
-                            chr:TranslateBy(hum.MoveDirection * 9 * delta * 9);
+                            chr:TranslateBy(hum.MoveDirection * 4 * delta * 4);
                         else
-                            chr:TranslateBy(hum.MoveDirection * delta * 9);
+                            chr:TranslateBy(hum.MoveDirection * delta * 4);
                         end
                     end
                 end
