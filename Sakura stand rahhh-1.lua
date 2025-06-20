@@ -327,9 +327,9 @@ getgenv().SuperSpeed = function()
                         local hb = game:GetService("RunService").Heartbeat
                         local delta = hb:Wait()
                         if hum.MoveDirection.Magnitude > 0 then
-                            chr:TranslateBy(hum.MoveDirection * 4 * delta * 4);
+                            chr:TranslateBy(hum.MoveDirection * 3.5 * delta * 3.5);
                         else
-                            chr:TranslateBy(hum.MoveDirection * delta * 4);
+                            chr:TranslateBy(hum.MoveDirection * delta * 3.5);
                         end
                     end
                 end
@@ -3212,7 +3212,7 @@ HomeTab.newToggle("JumpPower","",getgenv().JumpPowerBypass or false,function(Val
 end)
 
 HomeTab.newButton("Reset Character","",function()
-    task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
+    --task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SukunaDialogue"):FireServer(unpack(args));
 end)
