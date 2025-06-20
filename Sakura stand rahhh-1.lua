@@ -3212,7 +3212,7 @@ HomeTab.newToggle("JumpPower","",getgenv().JumpPowerBypass or false,function(Val
 end)
 
 HomeTab.newButton("Reset Character","",function()
-    --task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
+    task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SukunaDialogue"):FireServer(unpack(args));
 end)
@@ -3390,7 +3390,7 @@ HomeTab.newToggle("Sakura Hub, Go Rainbow Please","",getgenv().AutoGoingRainbow 
     getgenv().UsingRainbowUI();
 end)
 
---HomeTab.newButton("Sakura Hub Changelogs GUI","",function()
+HomeTab.newButton("Sakura Hub Changelogs GUI","",function()
     task.spawn(function()BoredLibrary.prompt("Sakura Hub  🌸","Loading Changelogs...",0.75);end)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/Changelogs"))();
@@ -3796,8 +3796,8 @@ FarmingTab.newButton("Equip Shinra Kusakabe(Best for Private Server Autofarm)","
     end)
 end)
 
---FarmingTab.newLabel("Statistics GUI   📊");
---FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
+FarmingTab.newLabel("Statistics GUI   📊");
+FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
     getgenv().ToggleStatisticsGUI = Value
     game:GetService("CoreGui").StatisticsGUI.Enabled = getgenv().ToggleStatisticsGUI;
 end)
@@ -3861,8 +3861,8 @@ FarmingTab.newToggle("Auto Sell Everything","",getgenv().AutoSelling or false,fu
     getgenv().SellingAnyItem();
 end)
 
---FarmingTab.newLabel("Autofarming Miscellaneous   📌");
---FarmingTab.newToggle("Auto Equip Weapon (Requires Unequipped Weapon Specs only)","",getgenv().AutoEquipWeapon or false,function(Value)
+FarmingTab.newLabel("Autofarming Miscellaneous   📌");
+FarmingTab.newToggle("Auto Equip Weapon (Requires Unequipped Weapon Specs only)","",getgenv().AutoEquipWeapon or false,function(Value)
     getgenv().AutoEquipWeapon = Value
     getgenv().WeaponEquipped();
 end)
