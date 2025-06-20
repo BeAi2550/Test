@@ -10,7 +10,7 @@
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "5.1";
+getgenv().CurrentVersion = "5.8";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -990,86 +990,6 @@ getgenv().MockingPlayers = function()
     end)
 end
 
-getgenv().FuckingAuddysBigGyatt = function()
-    task.spawn(function()
-        if getgenv().AutoFuckingAuddy == true then
-            local FuckAnimation = Instance.new("Animation");FuckAnimation.AnimationId = "rbxassetid://148840371" local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(FuckAnimation);k:Play();k:AdjustSpeed(6);
-        else
-            for i,v in ipairs((game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid") or game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("AnimationController")):GetPlayingAnimationTracks()) do
-                v:Stop();
-            end
-        end
-    end)
-
-    task.spawn(function()
-        if getgenv().AutoFuckingAuddy == true then
-            local GahDamn = "http://www.roblox.com/asset/?id=8448213216"
-            local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = GahDamn
-            Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-
-            local Claps = "http://www.roblox.com/asset/?id=9114758204"
-            local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Claps
-            Sound.Volume = 10;Sound.Looped = true;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-        else
-            for i,v in ipairs(workspace:children()) do
-                if v:isA("Sound") then
-                    v:Destroy();
-                end
-            end
-        end
-    end)
-
-    task.spawn(function()
-        while getgenv().AutoFuckingAuddy == true do
-            pcall(function()
-                local Auddy = game.Workspace.Map.NPCs["Auddy"];
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Auddy.HumanoidRootPart.Position - Auddy.HumanoidRootPart.CFrame.LookVector * 1,Auddy.HumanoidRootPart.Position);
-            end)
-            task.wait(0.25);
-        end
-    end)
-end
-
-getgenv().FuckingSyrentiaMouth = function()
-    task.spawn(function()
-        if getgenv().AutoFuckingSyrentia == true then
-            local FuckAnimation = Instance.new("Animation");FuckAnimation.AnimationId = "rbxassetid://148840371" local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(FuckAnimation);k:Play();k:AdjustSpeed(5);
-        else
-            for i,v in ipairs((game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid") or game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("AnimationController")):GetPlayingAnimationTracks()) do
-                v:Stop();
-            end
-        end
-    end)
-
-    task.spawn(function()
-        if getgenv().AutoFuckingSyrentia == true then
-            local GahDamn = "http://www.roblox.com/asset/?id=8448213216"
-            local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = GahDamn
-            Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-
-            local Slurps = "http://www.roblox.com/asset/?id=7132999597"
-            local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = Slurps
-            Sound.Volume = 10;Sound.Looped = true;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-        else
-            for i,v in ipairs(workspace:children()) do
-                if v:isA("Sound") then
-                    v:Destroy();
-                end
-            end
-        end
-    end)
-
-    task.spawn(function()
-        while getgenv().AutoFuckingSyrentia == true do
-            pcall(function()
-                local Syrentia = game.Workspace.Map.NPCs["Syrentia"];
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Syrentia.Head.Position - Syrentia.Head.CFrame.LookVector * -1 + Vector3.new(0,-0.5,0),Syrentia.Head.Position);
-            end)
-            task.wait(0.25);
-        end
-    end)
-end
-
 getgenv().TeleportHittingBehind = function()
     getgenv().DetectionDistance = 55
     getgenv().TeleportDistance = 5
@@ -1823,7 +1743,7 @@ end
 
 getgenv().LevelingUp = function()
     task.spawn(function()
-        while getgenv().AutoLevelingUp == true do task.wait(1.5);
+        while getgenv().AutoLevelingUp == true do task.wait(0.5);
             pcall(function()
                 if game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 then
                     if game:GetService("Players").LocalPlayer.Data.Cash.Value > 75 then
@@ -2021,7 +1941,7 @@ getgenv().PublicServerAutofarm = function()
     task.spawn(function()
         while getgenv().AutoPublicGrinding == true do
             pcall(function()
-                local args = {[1] = "/e gangnam"};
+                local args = {[1] = "/e boom"};
                 game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("Chatted"):FireServer(unpack(args));
             end)
             task.wait(0.35);
@@ -2250,7 +2170,7 @@ getgenv().StoredOFA = function()
     task.spawn(function()
         while getgenv().AutoStoreStageOne == true do
             pcall(function()
-                if game:GetService("Players").LocalPlayer.Data.StandName.Value == "OA [Stage 1]" and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled or getgenv().FoundAnything == false and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled then
+                if game:GetService("Players").LocalPlayer.Data.StandName.Value == "One for All [Stage 1]" and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled or getgenv().FoundAnything == false and not game:GetService("Players").LocalPlayer.PlayerGui.InCombat.Enabled then
                     for i = 1,95 do -- Supports up to 95 stand slots :O
                         if game:GetService("Players").LocalPlayer.PlayerGui.StandStorage.Outer.Inner.Inner["Slot"..i].Text.Text == "Standless" then
                             local args = {"Slot"..i};
@@ -2785,7 +2705,7 @@ getgenv().UsingTokensToCash = function()
     task.spawn(function()
         while getgenv().AutoConvertTokens == true do
             pcall(function()
-                if game:GetService("Players").LocalPlayer.Data.Token.Value > 500 and game:GetService("Players").LocalPlayer.Data.Cash.Value < 500 then
+                if game:GetService("Players").LocalPlayer.Data.Token.Value > 500 and game:GetService("Players").LocalPlayer.Data.Cash.Value < 20000 then
                     for i = 1,2 do
                         local args = {[1] = "T4C"};
                         game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("TokenExchange"):FireServer(unpack(args));
@@ -3068,7 +2988,7 @@ getgenv().RollDeathBanner = function()
     task.spawn(function()
         while getgenv().AutoRollDeaths == true do
             pcall(function()
-                local args = {[1] = getgenv().WhichTypez};
+                local args = {[2] = getgenv().WhichTypez};
                 game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("PurchaseDeathAnim"):FireServer(unpack(args)); 
             end)
             task.wait(0.45);
@@ -3278,35 +3198,21 @@ HomeTab.newButton("Script Made by Flames Continue By B&M","",function()
     BoredLibrary.prompt("Sakura Hub   🌸","Thank you Mommy Flames <3",1.5);
 end)
 
-HomeTab.newButton("Gui Library Made by Chillz","",function()
-    local LoudFarts = "http://www.roblox.com/asset/?id=6811876591"
-    local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = LoudFarts
-    Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-    BoredLibrary.prompt("Sakura Hub   🌸","Thank you Daddy Chillz <3",0.5);
-end)
-
-HomeTab.newButton("Notify Library Made by Bored","",function()
-    local LoudFarts = "http://www.roblox.com/asset/?id=6811876591"
-    local Sound = Instance.new("Sound");Sound.Name = "Sound";Sound.SoundId = LoudFarts
-    Sound.Volume = 10;Sound.Looped = false;Sound.Archivable = false;Sound.Parent = game.Workspace;Sound:Play();
-    BoredLibrary.prompt("Sakura Hub   🌸","Thank you Daddy Bored <3",0.5);
-end)
-
 HomeTab.newLabel("Local Player Scripts   📢");
-HomeTab.newToggle("Super Walkspeed","",getgenv().WalkspeedBypass or false,function(Value)
+HomeTab.newToggle("Walkspeed","",getgenv().WalkspeedBypass or false,function(Value)
     getgenv().WalkspeedBypass = Value
 
     -- Got From https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source
     getgenv().SuperSpeed();
 end)
 
-HomeTab.newToggle("Super JumpPower","",getgenv().JumpPowerBypass or false,function(Value)
+HomeTab.newToggle("JumpPower","",getgenv().JumpPowerBypass or false,function(Value)
     getgenv().JumpPowerBypass = Value
     getgenv().SuperJump();
 end)
 
-HomeTab.newButton("Reset Character (Gets rid of Combat Mark)","",function()
-    task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
+HomeTab.newButton("Reset Character","",function()
+    --task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SukunaDialogue"):FireServer(unpack(args));
 end)
@@ -3318,7 +3224,7 @@ HomeTab.newButton("beta get one for all manuals","",function()
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes", 9e9):WaitForChild("ObtainOFA", 9e9):FireServer(unpack(args))
 end)
 
-HomeTab.newButton("Insta Respawn Character (Gets rid of Combat Mark)","",function()
+HomeTab.newButton("Insta Respawn Character","",function()
     getgenv().GuildName = "Herrscher of the Void's Army";
     getgenv().Password = "2000";
 
@@ -3377,7 +3283,7 @@ HomeTab.newToggle("Cloudy","",getgenv().AutoCloudy or false,function(Value)
 end)
 
 HomeTab.newLabel("Sound Scripts   🔊");
-HomeTab.newToggle("Deku's Theme   🔥","",getgenv().AutoDekuTheme or false,function(Value)
+HomeTab.newToggle("Deku's Theme","",getgenv().AutoDekuTheme or false,function(Value)
     getgenv().AutoDekuTheme = Value
     getgenv().ActivateDekuTheme();
 end)
@@ -3415,23 +3321,13 @@ HomeTab.newToggle("Auto Roast Dead Players (Be Near Them)","",getgenv().AutoRoas
     getgenv().MockingPlayers();
 end)
 
-HomeTab.newToggle("Auto Frick Auddy's Gyatt (Sus)","",getgenv().AutoFuckingAuddy or false,function(Value)
-    getgenv().AutoFuckingAuddy = Value
-    getgenv().FuckingAuddysBigGyatt();
-end)
-
-HomeTab.newToggle("Auto Frick Syrentia's Mouth (Sus)","",getgenv().AutoFuckingSyrentia or false,function(Value)
-    getgenv().AutoFuckingSyrentia = Value
-    getgenv().FuckingSyrentiaMouth();
-end)
-
 HomeTab.newLabel("Fighting Scripts   ⚔️");
-HomeTab.newToggle("Auto Ctrl + Click Combo Players / Mobs (Overpowered)","",getgenv().AutoTeleportPunching or false,function(Value)
+HomeTab.newToggle("Auto Ctrl + Click Combo Players / Mobs","",getgenv().AutoTeleportPunching or false,function(Value)
     getgenv().AutoTeleportPunching = Value
     getgenv().TeleportHittingBehind();
 end)
 
-HomeTab.newToggle("Auto Respawn When Low Health (Overpowered)","",getgenv().AutoRespawning or false,function(Value)
+HomeTab.newToggle("Auto Respawn When Low Health","",getgenv().AutoRespawning or false,function(Value)
     getgenv().AutoRespawning = Value
     getgenv().AutoGodModding();
 end)
@@ -3463,80 +3359,6 @@ HomeTab.newToggle("Auto Bug Players / Mobs (Requires Grab Moves)","",getgenv().A
     getgenv().UsingVoidOnOthers();
 end)
 
-HomeTab.newLabel("Available Working Codes (Report to me if stopped working)");
-local Code1 = "Kafk-ISTHATTHEREDMIST";
-local Code2 = "SFCOpen4Business";
-local Code3 = "freeRedMistPercent";
-local Code4 = "GiftFromSFC";
-local Code5 = "RolandAndFriends";
-local Code6 = "Kaiju-8";
-local Code7 = "KuzmaToldMeToAddThisCode";
-local Code8 = "3b5tsM79-^#>^<&(@!'~";
-
-HomeTab.newButton('Use Code: "'..Code1..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code1,1.5);
-    local args = {Code1};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code2..'"','',function()
-    BoredLibrary.prompt("Sakura Hub   🌸","Used: "..Code2,1.5);
-    local args = {Code2};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code3..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code3,1.5);
-    local args = {Code3};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code4..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code4,1.5);
-    local args = {Code4};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code5..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code5,1.5);
-    local args = {Code5};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code6..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code6,1.5);
-    local args = {Code6};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code7..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code7,1.5);
-    local args = {Code7};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newButton('Use Code: "'..Code8..'"','',function()
-    BoredLibrary.prompt("Sakura Hub  🌸","Used: "..Code8,1.5);
-    local args = {Code8};
-    game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("EnterCode"):FireServer(unpack(args));
-end)
-
-HomeTab.newLabel("Server Hop Scripts   🌐");
-HomeTab.newButton("Auto find The Arbiter   🌟  (Copied to Clipboard)","",function()
-    setclipboard("https://github.com/Lvl9999/TheArbiter/tree/main");
-    BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
-end)
-
-HomeTab.newButton("Auto find Space Curse   ☄️  (Copied to Clipboard)","",function()
-    setclipboard("https://github.com/Lvl9999/SpaceCurse/tree/main");
-    BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
-end)
-
-HomeTab.newButton("Auto One For All Finder   🦸  (PATCHED)","",function()
-    --setclipboard("https://github.com/Lvl9999/OneForAll/tree/main");
-    BoredLibrary.prompt("Sakura Hub  🌸","Patched, Wait for fix",0.5);
-end)
-
 HomeTab.newLabel("Quick Scripts   🚀");
 HomeTab.newButton("Animation Grabber","",function()
     loadstring(game:HttpGet("https://github.com/Not Have Yet/SakuraStand/blob/main/Grabber"))();
@@ -3563,17 +3385,12 @@ HomeTab.newButton("Good Universal","",function()
 end)
 
 HomeTab.newLabel("Sakura Hub Stuff  🌸");
-HomeTab.newButton("Official Discord Server (Got Deleted)","",function()
-    setclipboard("https://discord.gg/XcUFRW4DWH");
-    BoredLibrary.prompt("Sakura Hub  🌸","Copied to clipboard",0.5);
-end)
-
 HomeTab.newToggle("Sakura Hub, Go Rainbow Please","",getgenv().AutoGoingRainbow or false,function(Value)
     getgenv().AutoGoingRainbow = Value
     getgenv().UsingRainbowUI();
 end)
 
-HomeTab.newButton("Sakura Hub Changelogs GUI","",function()
+--HomeTab.newButton("Sakura Hub Changelogs GUI","",function()
     task.spawn(function()BoredLibrary.prompt("Sakura Hub  🌸","Loading Changelogs...",0.75);end)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/SakuraStand/main/Changelogs"))();
@@ -3702,7 +3519,7 @@ HomeTab.newInput("Report Bugs / Feedback","Type here anything you want me to kno
     end)
 end)
 
-HomeTab.newButton("Hide your username (Use Before Typing, Optional)","",function()
+HomeTab.newToggle("Hide your username (Use Before Typing, Optional)","",function()
     if not getgenv().HidedName == true then getgenv().HidedName = true
         getgenv().PrivacyMode = true;
         BoredLibrary.prompt("Sakura Hub  🌸","Hided Your Name   ✅",1.5);
@@ -3928,7 +3745,7 @@ FarmingTab.newButton("Read This (Very Important)","",function()
         Sound.Archivable = false;
         Sound.Parent = game.Workspace
         Sound:Play();
-    end)BoredLibrary.prompt("Sakura Hub   🌸","Dont ask me about Menos  😡😡😡",2.5);task.wait(1.85);
+    end)BoredLibrary.prompt("Sakura Hub   🌸","Dont ask me about Update Date!",2.5);task.wait(1.85);
     task.spawn(function()
         local Drip = "http://www.roblox.com/asset/?id=6820466812";
         local Sound = Instance.new("Sound");
@@ -3979,8 +3796,8 @@ FarmingTab.newButton("Equip Shinra Kusakabe(Best for Private Server Autofarm)","
     end)
 end)
 
-FarmingTab.newLabel("Statistics GUI   📊");
-FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
+--FarmingTab.newLabel("Statistics GUI   📊");
+--FarmingTab.newToggle("Show / Hide Statistics GUI","",false,function(Value)
     getgenv().ToggleStatisticsGUI = Value
     game:GetService("CoreGui").StatisticsGUI.Enabled = getgenv().ToggleStatisticsGUI;
 end)
@@ -4044,8 +3861,8 @@ FarmingTab.newToggle("Auto Sell Everything","",getgenv().AutoSelling or false,fu
     getgenv().SellingAnyItem();
 end)
 
-FarmingTab.newLabel("Autofarming Miscellaneous   📌");
-FarmingTab.newToggle("Auto Equip Weapon (Requires Unequipped Weapon Specs only)","",getgenv().AutoEquipWeapon or false,function(Value)
+--FarmingTab.newLabel("Autofarming Miscellaneous   📌");
+--FarmingTab.newToggle("Auto Equip Weapon (Requires Unequipped Weapon Specs only)","",getgenv().AutoEquipWeapon or false,function(Value)
     getgenv().AutoEquipWeapon = Value
     getgenv().WeaponEquipped();
 end)
@@ -4395,7 +4212,7 @@ AreasTab.newButton("Red Mist Room","",function()
     end)
 end)
 
-AreasTab.newButton("Hoh Domain","",function()
+AreasTab.newButton("Elysia Domain","",function()
     pcall(function()
         getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15664.208984375,-373.0132751464844,25287.08203125);
     end)
@@ -4437,7 +4254,7 @@ AreasTab.newButton("High View City","",function()
     end)
 end)
 
-AreasTab.newButton("Japan Place","",function()
+AreasTab.newButton("Baiken Place","",function()
     pcall(function()
         getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14446.931640625, -31.924787521362305, -3547.376708984375);
     end)
@@ -4561,7 +4378,7 @@ end)
 local SelectedStand = "Cross" -- default
 
 -- Create textbox to input stand name
-AreasTab:CreateTextBox("Stand Name", "Type Stand Name Here", function(text)
+AreasTab:Input("Stand Name", "Type Stand Name Here", function(text)
     SelectedStand = text
 end)
 
