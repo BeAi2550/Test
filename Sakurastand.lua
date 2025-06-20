@@ -1,16 +1,16 @@
--- // Sakura Hub 🌸 \\ -- | (Version 1.9)  Continue by B&M :3 
+-- // Sakura Hub 🌸 \\ -- | (Version 2.3)  Continue by B&M :3 
 
 --[[---------------------------------------------------------------------------------------------------
     This script not updates a lot, don't Use this loadstring to be in the latest version:
 
     getgenv().ToggleUI = "J" -- //  Key Toggle "J" set by default however you can change it.
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakura%20stand%20rahhh-1.lua";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakurastand.lua";
 
     pcall(function()
         loadstring(game:HttpGet(getgenv().SakuraHub))();
     end)
 ]]-----------------------------------------------------------------------------------------------------
-getgenv().CurrentVersion = "5.8";
+getgenv().CurrentVersion = "2.3";
 
 -- // Auto Loader \\ --
 repeat task.wait(0.25) until game:IsLoaded();task.spawn(function() pcall(function() if game:GetService("CoreGui"):FindFirstChild("DrRay") then game:GetService("CoreGui").DrRay:Destroy() end end) end)
@@ -3212,7 +3212,7 @@ HomeTab.newToggle("JumpPower","",getgenv().JumpPowerBypass or false,function(Val
 end)
 
 HomeTab.newButton("Reset Character","",function()
-    --task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
+    task.spawn(function()local ReturnAfterDeath = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame game:GetService("Players").LocalPlayer.CharacterAdded:Wait() repeat task.wait(1) until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ReturnAfterDeath end)
     local args = {[1] = "kill"};
     game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SukunaDialogue"):FireServer(unpack(args));
 end)
@@ -3479,7 +3479,7 @@ end)
 
 HomeTab.newButton("Reload Sakura Hub","",function()
     task.spawn(function()BoredLibrary.prompt("Sakura Hub  🌸","Reloading Hub...",0.75);end)
-    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakura%20stand%20rahhh-1.lua";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakurastand.lua";
 
     pcall(function()
         getgenv().Configurations();loadstring(game:HttpGet(getgenv().SakuraHub))();
