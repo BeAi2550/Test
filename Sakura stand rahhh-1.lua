@@ -547,7 +547,7 @@ end
 
 getgenv().EspOnItems = function()
     local Folder = {workspace.Item,workspace.Item2};
-    local Casual = {"Chest","Box","Barrel"};
+    local Casual = {"Singu","Black Mask","Gloves"};
     
     local function CreateBillboard(X,Color)
         local BillboardGui = Instance.new("BillboardGui");
@@ -3519,7 +3519,7 @@ HomeTab.newInput("Report Bugs / Feedback","Type here anything you want me to kno
     end)
 end)
 
-HomeTab.newToggle("Hide your username (Use Before Typing, Optional)","",function()
+HomeTab.newButton("Hide your username (Use Before Typing, Optional)","",function()
     if not getgenv().HidedName == true then getgenv().HidedName = true
         getgenv().PrivacyMode = true;
         BoredLibrary.prompt("Sakura Hub  🌸","Hided Your Name   ✅",1.5);
