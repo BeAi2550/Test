@@ -2444,7 +2444,7 @@ getgenv().UsingDekuAutofarm1 = function()
         while getgenv().AutofarmOnDeku1 == true do
             pcall(function()
                 local Lplayer = game:GetService("Players").LocalPlayer;
-                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then task.wait(0.45);
+                if not game:GetService("Workspace").Living:FindFirstChild("Deku") and not game:GetService("Workspace").Living:FindFirstChild("Roland") and not game:GetService("Workspace").Item2:FindFirstChild("OA's Grace") and Lplayer.Backpack:FindFirstChild("OA's Grace") and Lplayer.Data.StandName.Value == "One for All [Stage 3]" then task.wait(0.12);
                     Lplayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.88117599487305,-116.3696060180664,344.53594970703125);
                     game:GetService("ReplicatedStorage"):WaitForChild("UseItem"):WaitForChild("OFA"):FireServer();
                     task.wait(0.5);
