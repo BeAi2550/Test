@@ -1246,7 +1246,6 @@ getgenv().UsingRainbowUI = function()
             game:GetService("CoreGui").DrRay.TopBar.BackgroundColor3 = Color3.new(0,0,0);
             game:GetService("CoreGui").DrRay.MainBar.BackgroundColor3 = Color3.new(0,0,0);
             game:GetService("CoreGui").DrRay.TopBar.TopBar.BackgroundColor3 = Color3.new(0,0,0);
-            game:GetService("CoreGui").StatisticsGUI.Frame.BackgroundColor3 = Color3.new(0,0,0);
         end
     end)
 
@@ -1255,7 +1254,6 @@ getgenv().UsingRainbowUI = function()
             pcall(function()  
                 local TopBar = game:GetService("CoreGui"):WaitForChild("DrRay"):WaitForChild("TopBar");
                 local MainBar = game:GetService("CoreGui"):WaitForChild("DrRay"):WaitForChild("MainBar");
-                local Stats = game:GetService("CoreGui"):WaitForChild("StatisticsGUI"):WaitForChild("Frame");
 
                 local T = tick() % 1
                 local R = math.sin(T * 2 * math.pi) * 0.5 + 0.5
