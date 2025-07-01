@@ -4294,6 +4294,18 @@ AreasTab.newButton("RokaLab","",function()
     end)
 end)
 
+AreasTab.newButton("Wall Eyes","",function()
+    pcall(function()
+        getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-18426.705078125, 948.1781616210938, 7193.40625);
+    end)
+end)
+
+AreasTab.newButton("Tusk","",function()
+    pcall(function()
+        getgenv().PlaySound();game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-374.64483642578125, 62.36265563964844, 1823.8907470703125);
+    end)
+end)
+
 AreasTab.newLabel("NPC Teleports + Interactions   📌");
 local SelectedNpc = nil
 
