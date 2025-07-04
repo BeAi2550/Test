@@ -4,7 +4,7 @@ this is SS script from mommy FlameW I am just continue not making new one or cla
 
 # Here Loader
 
-getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/ss/refs/heads/main/Sakurastand.lua";
+    getgenv().SakuraHub = "https://raw.githubusercontent.com/BeAi2550/Test/refs/heads/main/Sakurastand.lua";
 
     pcall(function()
         loadstring(game:HttpGet(getgenv().SakuraHub))();
