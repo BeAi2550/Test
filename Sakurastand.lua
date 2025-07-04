@@ -573,7 +573,7 @@ getgenv().EspOnItems = function()
     end
     
     local function ShouldIgnore(X)
-        return X.Name == "SoulSpawn" or X.Position == Vector3.new(1804.5390625,-298.173583984375,-309.4649658203125);
+        return X.Name == "SoulSpawn" "Box" or X.Position == Vector3.new(1804.5390625,-298.173583984375,-309.4649658203125);
     end
     
     local function UseESP(X)
