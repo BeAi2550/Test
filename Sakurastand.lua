@@ -2722,18 +2722,15 @@ getgenv().StealingOneForAll = function()
         while getgenv().AutoStealingOfa == true do
             pcall(function()
                 if game:GetService("Players").LocalPlayer.Data.StandName.Value == "Standless" then
-                    if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 2 then
+                    if game:GetService("Players").LocalPlayer.Data.Mastery.Value < 3 then
                         if workspace.Map.NPCs:FindFirstChild("Kuzma") then
                             for i,v in pairs(game:GetService("Workspace").Map.NPCs.Kuzma:GetChildren()) do
                                 if v:IsA("ClickDetector") then fireclickdetector(v);
                                     for i = 1,15 do task.wait(0.15);
                                         local SkipDialogue = game:GetService("Players").LocalPlayer.PlayerGui.Dialogue.Outer.Inner.TextLabel;
     
-                                        game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,true,SkipDialogue,5);
-                                        game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,false,SkipDialogue,5);
-                                         local args = {}
-
-                                        game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes", 9e9):WaitForChild("ObtainOFA", 9e9):FireServer(unpack(args))       
+                                        game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,true,SkipDialogue,3);
+                                        game:GetService("VirtualInputManager"):SendMouseButtonEvent(SkipDialogue.AbsolutePosition.X+SkipDialogue.AbsoluteSize.X/5,SkipDialogue.AbsolutePosition.Y+50,0,false,SkipDialogue,3);       
                                     end
                                 end
                             end
